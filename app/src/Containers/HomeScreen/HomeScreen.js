@@ -6,6 +6,8 @@ import {
 
 import styles from './styles';
 
+import IceCream from '../../assets/imgs/IceCream.svg';
+
 class HomeScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -35,7 +37,7 @@ class HomeScreen extends React.Component {
         return (
             <View style={styles.home}>
                 <View style={styles.container}>
-                    <Text style={styles.text}>Work in progress (Home Screen)</Text>
+                    <IceCream width={500} height={500} fill="#000" style={styles.icon} />
                 </View>
             </View>
         );
