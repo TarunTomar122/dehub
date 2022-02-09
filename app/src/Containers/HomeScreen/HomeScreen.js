@@ -8,14 +8,18 @@ import styles from './styles';
 
 import IceCream from '../../assets/imgs/IceCream.svg';
 
+import { withSocketContext } from "../../contexts/Socket";
+
 class HomeScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            socket: this.props.socket,
         };
     }
 
     async componentDidMount() {
+
         this._unsubscribe = this.props.navigation.addListener('focus', () => {
             this.refreshScreen();
         });
@@ -44,4 +48,4 @@ class HomeScreen extends React.Component {
     }
 }
 
-export default HomeScreen;
+export default withSocketContext(HomeScreen);
